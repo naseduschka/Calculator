@@ -1,13 +1,15 @@
 package ru.tsystems;
 
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 
-public class Main {
-    public static void main(String[] args) {
+public class Main implements Runnable{
+    @Override
+    public void run() {
         Frame frame = new ru.tsystems.CalculatorFrame();
         frame.setSize(400, 400);
 
@@ -26,6 +28,10 @@ public class Main {
 
         frame.setBounds((screenSize.width -WIDTH)/2, (screenSize.height-HEIGHT)/2, WIDTH,HEIGHT);
         frame.setVisible(true);
-    };
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Main()); //new Main() объект класса Main
+    }
 
 }

@@ -13,7 +13,7 @@ public class CalculatorFrame extends JFrame {
 
 
     CalculatorFrame() {
-        super();
+        super("MyCalculator");
 
         this.setLayout(new GridLayout(5, 4, 10, 10));
 
@@ -21,11 +21,13 @@ public class CalculatorFrame extends JFrame {
         textField.setEditable(false);
         this.add(textField);
         textField.setText("0");
+        textField.setName("Display");
         textField.setHorizontalAlignment(SwingConstants.RIGHT);
         textField.setFont(new Font("Consolas", Font.BOLD, 26));
 
 
         button0 = new JButton("0");
+        button0.setName("0");
         this.add(button0);
 
         button1 = new JButton("1");
