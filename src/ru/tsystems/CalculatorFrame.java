@@ -6,6 +6,7 @@ import java.awt.*;
 public class CalculatorFrame extends JFrame {
 
     private JTextField textField;
+    //private Button [] buttons;
     private JButton button0;
     private JButton button1;
     private JButton backspace;
@@ -33,7 +34,15 @@ public class CalculatorFrame extends JFrame {
         backspace = new JButton("<");
         this.add(backspace);
 
-
+//        buttons = new Button[10];
+//
+//        for (int i=0; i<10; i++) {
+//            buttons[i] = new Button(Integer.toString(i));
+//        }
+//
+//        for (int i=0; i<10; i++) {
+//            this.add(buttons[i]);
+//        }
 
         Button0 pressButton0 = new Button0(textField);
         button0.addActionListener(pressButton0);
@@ -41,8 +50,16 @@ public class CalculatorFrame extends JFrame {
         Button1 pressButton1 = new Button1(textField);
         button1.addActionListener(pressButton1);
 
+
         Backspace pressbackspace = new Backspace(textField);
         backspace.addActionListener(pressbackspace);
 
+
+
+//        DigitalListener buttonListener = new DigitalListener();
+//        for (int i=0; i<10; i++) {
+//            buttons[i].addActionListener(buttonListener);
+//        }
+//
     }
 }

@@ -1,5 +1,4 @@
 package ru.tsystems;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -7,10 +6,9 @@ import javax.swing.*;
 
 
 public class Button1 implements ActionListener {
-    String buttonNumber;
+    String buttonNumber="1";
 
     private JTextField textField;
-
 
     Button1(JTextField textField) {
         this.textField = textField;
